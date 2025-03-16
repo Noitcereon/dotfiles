@@ -1,7 +1,7 @@
 # I - Noitcereon - will put any custom path modifications in here.
 # Command to add to path is:
 # export PATH=/some-path:$PATH
-# Make not of the : after some-path and the $ on the second mention of PATH.
+# Make note of the : after some-path and the $ on the second mention of PATH.
 
 # rider.sh
 export PATH="/home/noitcereon/Applications/JetBrains Rider-2023.3.2/bin":$PATH
