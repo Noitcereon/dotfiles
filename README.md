@@ -28,6 +28,10 @@ This will install Chezmoi and initialize the configuration based on this dotfile
 
 `chezmoi cd` opens a subshell in the source directory.
 
+`chezmoi update` pulls the latest changes from your remote repo and runs chezmoi apply.
+
+> Note: Use normal git commands to add, commit, and push changes to your remote repo. (in the directory you're in after using `chezmoi cd`)
+
 For more information see the Chezmoi documentation: <https://www.chezmoi.io/user-guide/command-overview/>
 
 
