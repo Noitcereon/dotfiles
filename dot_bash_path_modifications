@@ -1,0 +1,22 @@
+# I - Noitcereon - will put any custom path modifications in here.
+# Command to add to path is:
+# export PATH=/some-path:$PATH
+# Make not of the : after some-path and the $ on the second mention of PATH.
+
+# rider.sh
+export PATH="/home/noitcereon/Applications/JetBrains Rider-2023.3.2/bin":$PATH
+
+# dotnet
+export PATH="/home/noitcereon/.dotnet":$PATH
+
+# node
+# Node  was instead added to PATH via NVM in .bashrc (automatically via script)
+# export PATH="/home/noitcereon/ManuallyInstalledDependencies/node-v20.11.0-linux-x64/bin":$PATH
+
+# code (Visual Studio Code)
+export PATH="/usr/share/code/code":$PATH
+
+# IntelliJ IDEA
+export PATH="/home/noitcereon/Applications/idea-IU-232.9921.47/bin":$PATH
+
+
