@@ -1,0 +1,4 @@
+" .vimrc is the 'runtime configuration' for Vim. It executes the below commands, when opening a file with Vim.
+
+" Show line numbers
+set number
