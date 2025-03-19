@@ -4,10 +4,12 @@
 # Make note of the : after some-path and the $ on the second mention of PATH.
 
 # rider.sh
-export PATH="/home/noitcereon/Applications/JetBrains Rider-2023.3.2/bin":$PATH
+RIDER_BIN_HOME="/home/noitcereon/Applications/JetBrains Rider-2023.3.2/bin"
+export PATH="${RIDER_BIN_HOME}:${PATH}"
 
 # dotnet
-export PATH="/home/noitcereon/.dotnet":$PATH
+DOTNET_HOME="/home/noitcereon/.dotnet"
+export PATH="${DOTNET_HOME}:${PATH}"
 
 # node
 # Node  was instead added to PATH via NVM in .bashrc (automatically via script)
@@ -17,6 +19,8 @@ export PATH="/home/noitcereon/.dotnet":$PATH
 export PATH="/usr/share/code/code":$PATH
 
 # IntelliJ IDEA
-export PATH="/home/noitcereon/Applications/idea-IU-232.9921.47/bin":$PATH
+INTELLIJ_BIN_HOME="/home/noitcereon/Applications/idea-IU-232.9921.47/bin"
+export PATH="${INTELLIJ_HOME}:${PATH}"
+
 
 
