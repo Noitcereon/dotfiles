@@ -1,5 +1,10 @@
 #!/bin/bash
 
+alias gw='./gradlew clean'
+
+# Open a place in File explorer
+alias open='xdg-open'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
