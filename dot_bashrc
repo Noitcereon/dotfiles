@@ -8,6 +8,17 @@ case $- in
       *) return;;
 esac
 
+# Custom config (Noitcereon)
+
+if [[ $HOSTNAME -eq "linux-mint-vm" ]]; then
+	# Work Specific config
+	HOME_DIR=$(echo ~)
+	source "${HOME_DIR}/bash-setup-work-pc.sh"
+fi
+
+# END Custom config
+
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
