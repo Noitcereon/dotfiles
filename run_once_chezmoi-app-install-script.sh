@@ -2,8 +2,7 @@
 
 # This script updates the APT package list and installs applications
 # using the APT package manager (assuming a Debian based OS).
-# It includes error handling, checks for root privileges, and
-# skips installation if the packages are already installed.
+# If a package is already installed it is skipped.
 #
 # Usage:
 # 1. Make it executable: chmod +x chezmoi-app-install_script.sh
@@ -18,13 +17,6 @@ packages_installed=""
 
 # Define functions used in the "main" script at the bottom.
 
-# Function to check if the script is run as root
-check_root() {
-    if [ "$EUID" -ne 0 ]; then
-        echo "Please run $script_name as root or with sudo."
-        exit 1
-    fi
-}
 update_packages() {
     echo "Updating package list..."
     sudo apt-get update -y
@@ -42,7 +34,6 @@ install_package() {
     fi
 }
 main() {
-  check_root
   update_packages
   install_package "vim"
   install_package "git"
