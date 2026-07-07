@@ -27,6 +27,7 @@ if [ -f ~/.bash_path_modifications ]; then
 	. ~/.bash_path_modifications
 fi
 
+export EDITOR="/usr/bin/vim"
 # END Custom config
 
 
