@@ -10,12 +10,6 @@ esac
 
 # Custom config (Noitcereon)
 
-if [[ $HOSTNAME -eq "linux-mint-vm" ]]; then
-	# Work Specific config
-	HOME_DIR=$(echo ~)
-	source "${HOME_DIR}/bash-setup-work-pc.sh"
-fi
-
 # Alias definitions.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
