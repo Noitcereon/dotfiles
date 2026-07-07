@@ -1,4 +1,40 @@
 " .vimrc is the 'runtime configuration' for Vim. It executes the below commands, when opening a file with Vim.
+" Reference: https://linux101.dev/vim-editor/configure-vimrc/
+" https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
 
 " Show line numbers
 set number
+
+" Show current mode (e.g. INSERT)
+set showmode
+
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
+
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
+
+" Load an indent file for the detected file type.
+filetype indent on
+
+" Enable syntax highlighting for better code readability
+syntax on " Note: not available in tiny-vim. Requires a more full-fledged vim install
+
+" Search config
+set hlsearch    " Highlight search matches
+set incsearch   " Incremental search
+set showmatch " Show matching words during a search.
+
+" Make VIM incompatible with VI to avoid unexpected behaviour.
+set nocompatible
+
+" Use space characters instead of tabs.
+set expandtab
+" Set shift width to x spaces.
+set shiftwidth=2
+" Set tab width to x columns.
+set tabstop=2
+
+" Clear search pattern with :C
+:command C let @/=""
+
