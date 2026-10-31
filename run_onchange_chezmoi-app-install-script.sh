@@ -39,6 +39,7 @@ main() {
   update_packages
   install_package "vim"
   install_package "git"
+  install_package "openjdk-21-jdk"
   echo "" # to get blank line.
   echo "Finished running ${script_name}"
   echo "Packages newly installed: ${packages_installed}"
