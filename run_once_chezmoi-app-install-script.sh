@@ -19,7 +19,7 @@ packages_installed=""
 
 update_packages() {
     echo "Updating package list..."
-    sudo apt-get update -y
+    sudo apt-get update
 }
 install_package() {
     local package_name=$1
