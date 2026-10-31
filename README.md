@@ -4,15 +4,20 @@ This is a repository for managing configuration files across systems with the [C
 
 ## Usage
 
-To initialize the configuration on a new machine run the following command:
+To initialize the configuration on a new machine run either of the following commands:
 
 > Note: in the below command `Noitcereon` is my GitHub Username.
 
-```
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply Noitcereon
-```
+1. For interacting with GitHub using HTTPS (no setup to download, but Personal Access Token needed for edits)
+    ```
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply Noitcereon
+    ```
+2. For interacting with GitHub with SSH (requires [SSH key setup](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)):
+    ```
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --ssh --apply Noitcereon
+    ```
 
-This will install Chezmoi and initialize the configuration based on this dotfiles repository.
+This will install Chezmoi and initialize the configuration based on this dotfiles repository. You will be prompted to select 1 of 2 profiles 'w' for work or 'p' for personal (this sets up chezmoi config file under `~/.config/chezmoi/chezmoi.toml`(which is also editable via `chezmoi edit-config`)
 
 ### Common commands
 
