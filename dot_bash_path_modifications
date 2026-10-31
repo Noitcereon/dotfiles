@@ -3,30 +3,24 @@
 # export PATH=/some-path:$PATH
 # Make note of the : after some-path and the $ on the second mention of PATH.
 
-# Javahome/tandersen25/.jdks/temurin-21.0.6
-JAVA_21_HOME="/home/tandersen25/.jdks/temurin-21.0.6"
-JAVA_17_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
-export JAVA_HOME="${JAVA_17_HOME}"
-export PATH="${JAVA_HOME}/bin:${PATH}"
+NOIT_APPLICATION_HOME="${HOME}/Applications"
+# MANUALLY_INSTALLED_DEPENDENCIES is not in use yet, but I figure it could be useful to see which dependencies are manually installed. 
+# They should point with symlink to where they are conventionally installed.
+# MANUALLY_INSTALLED_DEPENDENCIES="${HOME}/ManuallyInstalledDependencies"
 
-# rider.sh
-RIDER_BIN_HOME="/home/noitcereon/Applications/JetBrains Rider-2023.3.2/bin"
+# rider.sh (requires 'JetBrains-Rider' to be a symlink to the installed version to work)
+RIDER_BIN_HOME="${NOIT_APPLICATION_HOME}/JetBrains-Rider/bin"
 export PATH="${RIDER_BIN_HOME}:${PATH}"
 
-# dotnet
-DOTNET_HOME="/home/noitcereon/.dotnet"
-export PATH="${DOTNET_HOME}:${PATH}"
+# IntelliJ IDEA (requires 'idea' to be a symlink to the installed version to work)
+INTELLIJ_BIN_HOME="${NOIT_APPLICATION_HOME}/idea/bin"
+export PATH="${INTELLIJ_BIN_HOME}:${PATH}"
 
-# node
-# Node  was instead added to PATH via NVM in .bashrc (automatically via script)
-# export PATH="/home/noitcereon/ManuallyInstalledDependencies/node-v20.11.0-linux-x64/bin":$PATH
+# Java should be added to PATH via the apt package 'update-alternatives'
+
+# dotnet
+DOTNET_HOME="${HOME}/.dotnet"
+export PATH="${DOTNET_HOME}:${PATH}"
 
 # code (Visual Studio Code)
 export PATH="/usr/share/code/code":$PATH
-
-# IntelliJ IDEA
-INTELLIJ_BIN_HOME="/home/noitcereon/Applications/idea-IU-232.9921.47/bin"
-export PATH="${INTELLIJ_HOME}:${PATH}"
-
-
-
