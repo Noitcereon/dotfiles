@@ -24,12 +24,14 @@ update_packages() {
 install_package() {
     local package_name=$1
     # Note: dpkg-query -W = lists installed packages matching the given argument.
-    # grep -w = match whole word.
-    # Also: if statement without brackets checks exit code in contrast to standard if [ ], which uses 'test'
-    if dpkg-query -W ${package_name} | grep -qw "${package_name}"; then
-        echo "$package_name is already installed." && already_installed="${package_name} ${already_installed}"
+    # dpkg-query --showformat='${db:Status-Status}' makes dpkg-query output only the status of the package (e.g. 'installed' or 'not installed')
+    # grep -q = quiet (no output to standard output)
+    # grep "^" and "$" = regex. Start of line and end of line respectively. 
+    # Also: if statement without brackets checks exit code in contrast to standard if with [ ], which uses 'test'
+    if dpkg-query -W --showformat='${db:Status-Status}' "${package_name}" | grep --quiet "^installed$"; then
+        echo "[SKIP] $package_name is already installed." && already_installed="${package_name} ${already_installed}"
     else
-        echo "Installing ${package_name}..."
+        echo "[INSTALL] Installing ${package_name}..."
         sudo apt-get install ${package_name} -y && packages_installed="${package_name} ${packages_installed}"
     fi
 }
