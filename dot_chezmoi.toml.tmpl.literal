@@ -1,0 +1,4 @@
+{{- $profile_options := list "work" "personal" -}}
+{{- $profile := promptChoiceOnce . "profile" "Which profile should this machine use? [work]|[personal]" $profile_options -}}
+[data]
+  profile = {{- $profile | quote -}}

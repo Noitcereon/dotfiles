@@ -1,7 +1,11 @@
 [user]
-  name = {{ .gitName | quote }}
-  email = {{ .email | quote }}
-
+{{- if eq .profile "work" }}
+  name = "Thomas 'Noitcereon' Andersen"
+  email = "thomas.andersen2@dxc.com"
+{{- else if eq .profile "personal" }}
+  name = "Noitcereon"
+  email = "thomaswowundercover@gmail.com"
+{{- end }}
 [core]
   editor = vim
   # Note: autocrlf depends on OS. Might need chezmoi template here, if used for other than Linux.
