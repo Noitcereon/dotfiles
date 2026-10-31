@@ -4,4 +4,8 @@
 
 [core]
   editor = vim
+  # Note: autocrlf depends on OS. Might need chezmoi template here, if used for other than Linux.
   autocrlf = input
+
+[color]
+  ui = auto
