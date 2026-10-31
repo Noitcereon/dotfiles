@@ -6,8 +6,10 @@ This is a repository for managing configuration files across systems with the [C
 
 To initialize the configuration on a new machine run the following command:
 
+> Note: in the below command `Noitcereon` is my GitHub Username.
+
 ```
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply Noitcereon
 ```
 
 This will install Chezmoi and initialize the configuration based on this dotfiles repository.
