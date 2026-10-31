@@ -32,7 +32,7 @@ install_package() {
         echo "[SKIP] $package_name is already installed." && already_installed="${package_name} ${already_installed}"
     else
         echo "[INSTALL] Installing ${package_name}..."
-        sudo apt-get install ${package_name} -y && packages_installed="${package_name} ${packages_installed}"
+        sudo apt-get install "${package_name}" -y && packages_installed="${package_name} ${packages_installed}"
     fi
 }
 main() {
