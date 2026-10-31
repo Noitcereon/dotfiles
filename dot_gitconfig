@@ -1,0 +1,7 @@
+[user]
+  name = Thomas 'Noitcereon' Andersen
+  email = thomaswowundercover@gmail.com
+
+[core]
+  editor = vim
+  autocrlf = input
