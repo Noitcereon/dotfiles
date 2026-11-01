@@ -2,7 +2,7 @@
 
 This is a repository for managing configuration files across systems with the [Chezmoi](https://www.chezmoi.io) tool.
 
-## Usage
+## Install
 
 To initialize the configuration on a new machine run either of the following commands:
 
@@ -19,6 +19,14 @@ To initialize the configuration on a new machine run either of the following com
 
 This will install Chezmoi and initialize the configuration based on this dotfiles repository. You will be prompted to select 1 of 2 profiles 'w' for work or 'p' for personal (this sets up chezmoi config file under `~/.config/chezmoi/chezmoi.toml`(which is also editable via `chezmoi edit-config`)
 
+## Usage
+
+There are multiple ways to manage the files managed by Chezmoi. My preferred approach is to edit directly in the Git repository and use standard Git commands to pull and push files.
+
+You can navigate to the Git repository Chezmoi uses thorugh the following command: `chezmoi cd`. This opens a subshell in the source directory.
+
+An alternative is to use Chezmoi to edit. See below for common Chezmoi commands.
+
 ### Common commands
 
 `chezmoi add $FILE` adds $FILE from your home directory to the source directory.
@@ -33,11 +41,13 @@ This will install Chezmoi and initialize the configuration based on this dotfile
 
 `chezmoi edit --apply $FILE` is like chezmoi edit $FILE but also runs chezmoi apply $FILE afterwards.
 
-`chezmoi cd` opens a subshell in the source directory.
+`chezmoi update` pulls the latest changes from your remote repo and runs `chezmoi apply`.
 
-`chezmoi update` pulls the latest changes from your remote repo and runs chezmoi apply.
+`chezmoi edit-config` edits Chezmoi's machine specific config file (`~/.config/chezmoi/chezmoi.toml`)
 
-> Note: Use normal git commands to add, commit, and push changes to your remote repo. (in the directory you're in after using `chezmoi cd`)
+`chezmoi execute-template < <path-to-template>` A way of testing templates. Shows how the template would look after being filled in (can be a bit hard to use, when you need to give it parameters to fill in)
+
+`chezmoi purge --binary` Uninstalls Chezmoi, including its binary file. It does not touch already applied configuration.
 
 For more information see the Chezmoi documentation: <https://www.chezmoi.io/user-guide/command-overview/>
 
