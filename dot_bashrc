@@ -13,12 +13,13 @@ esac
 # Alias definitions.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    source ${HOME}/.config/bash/.bash_aliases
+BASH_CONFIG_HOME="${HOME}/.config/bash"
+if [ -f "${BASH_CONFIG_HOME}/.bash_aliases" ]; then
+    source "${BASH_CONFIG_HOME}/.bash_aliases"
 fi
 
-if [ -f ~/.bash_path_modifications ]; then
-	source ${HOME}/.config/bash/.bash_path_modifications
+if [ -f "${BASH_CONFIG_HOME}/.bash_path_modifications" ]; then
+	source "${BASH_CONFIG_HOME}/.bash_path_modifications"
 fi
 
 export EDITOR="/usr/bin/vim"
