@@ -15,6 +15,13 @@ script_name=$0
 already_installed=""
 packages_installed=""
 
+# APT packages that should be installed on all systems.
+packages=(
+  "vim"
+  "git"
+  "openjdk-21-jdk"
+)
+
 # Define functions used in the "main" script at the bottom.
 
 update_packages() {
@@ -37,9 +44,9 @@ install_package() {
 }
 main() {
   update_packages
-  install_package "vim"
-  install_package "git"
-  install_package "openjdk-21-jdk"
+  for package in "${packages[@]}"; do
+    install_package "$package"
+  done
   echo "" # to get blank line.
   echo "Finished running ${script_name}"
   echo "Packages newly installed: ${packages_installed}"
