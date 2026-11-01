@@ -17,6 +17,7 @@ packages=(
   "vim"
   "git"
   "openjdk-21-jdk"
+  "copyq"
 )
 
 # Define functions used in the "main" script at the bottom.
