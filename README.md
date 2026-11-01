@@ -1,6 +1,8 @@
 # dotfiles
 
-This is a repository for managing configuration files across systems with the [Chezmoi](https://www.chezmoi.io) tool.
+This is a repository for managing configuration files and installing a base set of applications across multiple machines, so setting up a new machine is as quick and painless as possible.
+
+This is achieved via the tool [Chezmoi](https://www.chezmoi.io).
 
 ## Install
 
