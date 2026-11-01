@@ -1,12 +1,9 @@
 #!/bin/bash
 
 # This script updates the APT package list and installs applications
-# using the APT package manager (assuming a Debian based OS).
-# If a package is already installed it is skipped.
-#
-# Usage:
-# 1. Make it executable: chmod +x chezmoi-app-install_script.sh
-# 2. Run with root privileges: sudo ./chezmoi-app-install-script.sh
+# using the APT package manager (it assumes a Debian based OS).
+# If a package is already installed it is skipped. 
+# Chezmoi runs files named run_onchance_*.sh everytime the file is changed.
 
 # "strict" bash mode. Exit on error. Exit on unused variable etc.
 set -euo pipefail
